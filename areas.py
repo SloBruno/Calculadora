@@ -17,21 +17,22 @@ esc1 = int(input('Digite 1 para Triângulo\nDigite 2 para Quadrilátero\n\n' + c
 if esc1 == 1:
     print('Digite 1 para Triângulo Qualquer;\nDigite 2 para Triângulo Equilátero;')
 
-if esc1 == 2:
+elif esc1 == 2:
     print("""
-Digite 3 para Quadrado;
-Digite 4 para Paralelograma;
-Digite 5 para Retângulo;
-Digite 6 para Losângulo;
+Digite 1 para Quadrado;
+Digite 2 para Paralelograma;
+Digite 3 para Retângulo;
+Digite 4 para Losângulo;
 """)
 
 
 else:
     print('Função não disponível')
 
-tipo = int(input(cor_amarela + 'Escolha:' + cor_reset))
+tipo = int(input(cor_amarela + 'Escolha2:' + cor_reset))
 
-if tipo == 1:
+#Triângulo Qualquer
+if esc1 == 1 and tipo == 1:
     print()
     a = float(input(cor_amarela + 'Aresta da Base:' + cor_reset))
     b = float(input(cor_amarela + 'Altura:' + cor_reset))
@@ -39,14 +40,44 @@ if tipo == 1:
     print(cor_vermelha + 'Resultado:' + cor_reset + '{:.2f}' .format((a * b) / 2))
     print()
 
-if tipo == 2:
+#Trângulo Equilátero
+elif esc1 == 1 and tipo == 2:
     print()
     c = float(input(cor_amarela + 'Aresta do Triângulo:' + cor_reset))
     print()
     print(cor_vermelha + 'Resultado:' + cor_reset + ' {:.2f}'.format((c ** 2) * math.sqrt(3) / 4))
     print()
 
-if tipo == 3:
+#Quadrado
+elif esc1 == 2 and tipo == 1:
+    print()
+    d = float(input(cor_amarela + 'Aresta do Quadrado:' + cor_reset))
+    print()
+    print(cor_vermelha + 'Resultado:' + cor_reset + '{:.2f}' .format(d ** 2))
+    print()
+
+#Paralelograma
+elif esc1 == 2 and tipo == 2:
+    print()
+    e = float(input(cor_amarela + 'Aresta da Base:' + cor_reset))
+    print()
+    f = float(input(cor_amarela + 'Altura:' + cor_reset))
+    print()
+    print(cor_vermelha + 'Resultado:' + cor_reset + '{:.2f}' .format((e*f)/2))
+    print()
+
+#Retângulo
+elif esc1 == 2 and tipo == 3:
+    print()
+    g = float(input(cor_amarela + 'Comprimento:' + cor_reset))
+    print()
+    h = float(input(cor_amarela + 'Largura:' + cor_reset))
+    print()
+    print(cor_vermelha + 'Resultado:' + cor_reset + '{:.2f}' .format(g*h))
+    print()
+
+#Losângulo
+elif esc1 == 2 and tipo == 4:
     print()
     d = float(input(cor_amarela + 'Aresta do Quadrado:' + cor_reset))
     print()
